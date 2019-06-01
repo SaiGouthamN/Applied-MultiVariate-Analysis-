@@ -1,0 +1,20 @@
+A sample data file is provided which contains
+information about "recommendations".  A "recommendation" is the group
+of Taskers from which the Client can choose one to book. In this
+sample data, each recommendation can have up to 15 Taskers shown.
+
+We want to understand what makes a Client choose a
+Tasker. In particular, use market data to build a model
+that suggests hourly rates to Taskers that would maximize their
+opportunity to be hired.
+
+The columns are as follows:
+
+ recommendation_id    unique identifier for this recommendation, or set of taskers shown
+ timestamp            when this recommendation was shown to the client
+ tasker_id            unique identifier for the Tasker
+ position             the position of the Tasker in the recommendation set, 1 - first, 2 - second, etc.
+ hourly_rate          the hourly rate for the Tasker when they were shown
+ num_completed_tasks  the number of Tasks the Tasker had completed in that category, when they were shown
+ hired                was the Tasker hired or not?  Only 1 tasker out of a set of recommendations can be hired
+ category             the category of work the Client needs help with
