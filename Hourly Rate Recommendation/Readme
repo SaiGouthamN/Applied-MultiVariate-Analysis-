@@ -3,9 +3,9 @@
     
     2.Use Position,Existing Hourly Rate, Num of Tasks completed as data points for calculating distances.Scale these features before calculating distances.
     
-    3.Scale the calculated average distance between 0 and 1.
+    3.Scale the calculated average distance between 0 and 0.5.
     
-    4.Now the dataset has a  distance column 'DIS' - referring to the average Euclideandistance of particular 'Not Hired' Tasker from all of the 'Hired Taskers'. Value of this Column will be defaulted to '1' for the ones who are already 'hired'.
+    4.Now the dataset has a  distance column 'DIS' - referring to the average Euclideandistance of particular 'Not Hired' Tasker from all of the 'Hired Taskers'. Value of this Column will be defaulted to '0' for the ones who are already 'hired'.
     
     5.Convert the distance measure to a similarity score using the formula 
     [Similarity= 1-scaled(Euclidean_Distance)]
