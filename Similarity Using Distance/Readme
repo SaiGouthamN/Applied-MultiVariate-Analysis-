@@ -3,18 +3,18 @@
     
     2.Use Position,Existing Hourly Rate, Num of Tasks completed as data points for calculating distances.Scale these features before calculating distances.
     
-    3.Scale the calculated average distance between 0.5 and 1.
+    3.Scale the calculated average distance between  0 and 0.5.
     
-    4.Now the dataset has a  distance column 'DIS' - referring to the average 'Euclidean Distance' of a particular 'Not Hired' Tasker from all of the 'Hired Taskers' in the same category. Value of this Column will be defaulted to '1' for the ones who are already 'hired'.
+    4.Now the dataset has a  distance column 'DIS' - referring to the average 'Euclidean Distance' of a particular 'Not Hired' Tasker from all of the 'Hired Taskers' in the same category. Value of this Column will be defaulted to '0' for the ones who are already 'hired'.
     
     5.Convert the distance measure to a similarity score using the formula 
-    [Similarity= 1scaled(Euclidean_Distance)] giving a Similarity Score between 0 and 0.5.
+    [Similarity= 1scaled(Euclidean_Distance)] giving a Similarity Score between 0.5 and 1.
     
     5.Use the Similarity Score as 'weight factor' to adjust the hourly rate.
     
     For example , a 'Not Hired' Tasker A ,in Moving Help category,with an existing hourly rate of 50$ and with a Similarity Score of 0.65 (to the 'hired cohort') ,would have an 'Adjusted Hourly Rate' of 50*0.65=32.5$. Taskers with similarity score of 1 will retain their existing hourly rate.
     
-    Taskers who are at the Maximum Distance from the 'hired cohort' will have atmost reduction of 50% to their existing hourly rate.( Refer Point 3)
+    Taskers who are at the Maximum Distance(0.5) from the 'hired cohort' will have atmost reduction of 50% to their existing hourly rate.( Refer Point 3)
     
     INDEPENDENT VARIABLE: Ranking Position,(Existing)Hourly Rate, Num_of_Tasks_Completed
     DEPENDENT VARIABLE :  Adjusted/ Recommended Hourly Rate
